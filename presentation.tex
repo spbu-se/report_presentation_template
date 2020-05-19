@@ -17,6 +17,7 @@
 \usepackage{algorithmicx}
 \usetikzlibrary{shapes,arrows}
 \usepackage{fancyvrb}
+\usepackage{appendixnumberbeamer}
 
 \newtheorem{rutheorem}{Теорема}
 \newtheorem{ruproof}{Доказательство}
@@ -197,6 +198,30 @@ $$
   \begin{itemize}
     \item Если результаты были представлены на конференции и опубликованы, это желательно указать. 
   \end{itemize}
+\end{frame}
+
+%\addtocounter{framenumber}{1}
+\appendix
+
+\begin{frame}
+  \frametitle{Дополнительный слайд}
+  Например, с огромной страшной формулой всего, которяа нужна для пояснения деталей при ответе на частый вопрос
+  
+\begin{eqnarray*}
+\lefteqn{
+\lim_{\bigtriangleup t \to 0^+}\int_{\bigtriangleup t}^{T} \! \int_{\Omega} \! D(t_1,x) \frac{\varphi(t_1-\bigtriangleup t,x)-\varphi(t_1,x)}{(-\bigtriangleup t)} \, \mathrm{d}x \, \mathrm{d}t_1 
+}\\
+&=&\lim_{\bigtriangleup t \to 0^+} \int_{0}^{T} \! \int_{\Omega} \! D(t_1,x) \frac{\varphi(t_1-\bigtriangleup t,x)-\varphi(t_1,x)}{(-\bigtriangleup t)} \chi_{(\bigtriangleup t,T)}(t_1) \, \mathrm{d}x \, \mathrm{d}t_1 
+\\
+&= &\int_{0}^{T} \! \int_{\Omega} \! D(t_1,x) \frac{\partial \varphi}{\partial t_1} (t_1,x) \, \mathrm{d}x \, \mathrm{d}t_1 .
+\end{eqnarray*}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Второй дополнительный слайд}
+
+Много дополнитеьных слайдов не надо: 1--2 вполне достатчно в большинстве случаев  
+  
 \end{frame}
 
 \end{document}
