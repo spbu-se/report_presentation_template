@@ -1,26 +1,46 @@
+%%% Обязательные пакеты
+%% Beamer
 \usepackage{beamerthemesplit}
-\usepackage{wrapfig}
 \usetheme{SPbGU}
-\usepackage{pdfpages}
-\usepackage{amsmath}
-\usepackage{cmap}
-\usepackage[T2A]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage[english,russian]{babel}
-\usepackage{indentfirst}
-\usepackage{amsmath}
-\usepackage{tikz}
-\usepackage{multirow}
-\usepackage[noend]{algpseudocode}
-\usepackage{algorithm}
-\usepackage{algorithmicx}
-\usetikzlibrary{shapes,arrows}
-\usepackage{fancyvrb}
+\beamertemplatenavigationsymbolsempty
 \usepackage{appendixnumberbeamer}
 
+%% Локализация
+\usepackage{fontspec}
+\setmainfont{CMU Serif}
+\setsansfont{CMU Sans Serif}
+\setmonofont{CMU Typewriter Text}
+%\setmonofont{Fira Code}[Contextuals=Alternate,Scale=0.9]
+%\setmonofont{Inconsolata}
+% \newfontfamily\cyrillicfont{CMU Serif}
+
+\usepackage{polyglossia}
+\setdefaultlanguage{russian}
+\setotherlanguage{english}
+
+%% Графика
+\usepackage{wrapfig} % Позволяет вставлять графику, обтекаемую текстом
+\usepackage{pdfpages} % Позволяет вставлять многостраничные pdf документы в текст
+
+%% Математика
+\usepackage{amsmath, amsfonts, amssymb, amsthm, mathtools} % "Адекватная" работа с математикой в LaTeX
+
+% Математические окружения с русским названием
 \newtheorem{rutheorem}{Теорема}
 \newtheorem{ruproof}{Доказательство}
 \newtheorem{rudefinition}{Определение}
 \newtheorem{rulemma}{Лемма}
 
-\beamertemplatenavigationsymbolsempty
+
+%%% Дополнительные пакеты. Используются в презентации, но могут быть отключены при необходимости
+\usepackage{tikz} % Мощный пакет для создание рисунков, однако может очень сильно замедлять компиляцию
+\usetikzlibrary{decorations.pathreplacing,calc,shapes,positioning,tikzmark}
+
+\usepackage{multirow} % Ячейка занимающая несколько строк в таблице
+
+%% Пакеты для оформления алгоритмов на псевдокоде
+\usepackage[noend]{algpseudocode}
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+
+\usepackage{fancyvrb}
