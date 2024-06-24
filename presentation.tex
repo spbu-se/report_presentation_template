@@ -149,30 +149,6 @@
 \end{tabular}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Анимация}
-  Для воспроизведения анимированных иллюстраций необходимо использовать просмотрщик PDF,
-  поддерживающий исполнение скриптов, например
-  \begin{itemize}
-    \item Adobe Acrobat Reader
-    \item Okular
-  \end{itemize}
-  \setlength{\fboxsep}{0pt}
-  \setlength{\fboxrule}{0.5pt}
-  \begin{figure}[h]
-    \begin{minipage}{0.45\textwidth}
-        \centering
-        \fbox{\animategraphics[autoplay, loop, scale=0.3]{7}{pictures/sensors/sensors-}{1}{26}}
-    \end{minipage}
-    % \hfill
-    \begin{minipage}{0.45\textwidth}
-        \centering
-        \fbox{\animategraphics[autoplay, loop, scale=0.3]{7}{pictures/encoders/encoders-}{1}{24}}
-    \end{minipage}
-    \caption{Сенсоры и энкодеры}
-  \end{figure}
-\end{frame}
-
 \begin{frame}[fragile]
   \frametitle{Доказательство корректности алгоритма}
   {\tiny Формулировки утверждений. Идеи доказательств проговариваются устно.}
@@ -262,7 +238,41 @@
   \item Кроме формул здесь могут быть схемы, рисунки, таблицы и другие вспомогательные материалы
 \end{itemize}
 
+\end{frame}
 
+\begin{frame}
+  \frametitle{Анимация}
+  Чаще всего анимированные слайды не требуются, но если очень надо, возможность добавить анимацию в PDF есть.
+  Используйте анимацию на слайдах с умом и только в случае необходимости (см. комментарий в исходном тексте)
+  % !!! ВНИМАНИЕ !!!
+  % Для воспроизведения анимированных иллюстраций необходимо использовать просмотрщик PDF, поддерживающий исполнение скриптов, например
+  % - Adobe Acrobat Reader
+  % - Okular
+  %
+  % Проблема в том, что многие популярные просмотрщики это делать не умеют, например
+  % - Evince
+  % - Web-браузеры
+  %
+  % Часто показывать презентацию вы будете не со своего компьютера, на котором может не быть подходлящего просмотрщика.
+  % Поэтому пользуйтесь анимацией на свой страх и риск!!!
+  %
+  % Полезные материалы
+  % - https://tug.ctan.org/macros/latex/contrib/animate/animate.pdf — документация к пакету animate
+  % - https://texblog.org/2018/03/05/the-animate-package/ — коротенький гайд для минимального примера
+
+  \setlength{\fboxsep}{0pt}
+  \setlength{\fboxrule}{0.5pt}
+  \begin{figure}[h]
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \fbox{\animategraphics[autoplay, loop, scale=0.3]{7}{pictures/sensors/sensors-}{1}{26}}
+    \end{minipage}
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \fbox{\animategraphics[autoplay, loop, scale=0.3]{7}{pictures/encoders/encoders-}{1}{24}}
+    \end{minipage}
+    \caption{Сенсоры и энкодеры}
+  \end{figure}
 \end{frame}
 
 \end{document}
